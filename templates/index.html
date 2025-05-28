@@ -1,31 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Random Quote Generator</title>
-    <style>
-        body {
-            font-family: Arial;
-            background: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .quote-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            max-width: 600px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="quote-box">
-        <h2>{{ quote }}</h2>
-        <br>
-        <a href="/">🔁 New Quote</a>
+    <div class="container">
+        <h1>✨ Quote of the Moment ✨</h1>
+        <div class="quote-box">
+            <p class="quote">"{{ quote }}"</p>
+            <p class="author">— {{ author }}</p>
+        </div>
+        <a href="/" class="button">🔁 New Quote</a>
     </div>
 </body>
 </html>
