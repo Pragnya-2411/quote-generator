@@ -43,3 +43,23 @@ body {
 .button:hover {
     background-color: #e94e3c;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #2c3e50, #4b79a1);
+        color: #f0f0f0;
+    }
+
+    .container {
+        background: #2c2c2e;
+        box-shadow: 0 8px 30px rgba(78, 31, 54, 0.118);
+    }
+
+    .button {
+        background-color: #ff6f61;
+    }
+
+    .button:hover {
+        background-color: #e85a50;
+    }
+}
