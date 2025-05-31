@@ -49,6 +49,8 @@ body {
     font-family: "Charm", cursive;
     font-weight: 400;
     font-style: normal;
+    /* border-width: 5px; */
+    border:2px solid#2c2c2e;
 }
 
 .button:hover {
