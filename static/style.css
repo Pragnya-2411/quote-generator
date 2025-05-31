@@ -3,7 +3,9 @@ body {
     background: linear-gradient(135deg, #f6d365, #fda085);
     color: #333;
     text-align: center;
-    padding: 185px;
+    padding: 190px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .container {
