@@ -13,7 +13,7 @@ body {
 .wrapper {
     background: linear-gradient(135deg, #f6d365, #fda085);
     transition: background 0.4s ease;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 190px 100px;
 }
 
@@ -131,7 +131,7 @@ body {
 .theme-toggle-btn {
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 60px;
     cursor: pointer;
     font-size: 1.8rem;
     z-index: 1000;
@@ -155,4 +155,29 @@ body {
     color: white;
     border: 2px solid #2c2c2e;
     transition: background 0.3s ease;
+}
+
+/* Both icons stacked in same spot */
+.theme-toggle-btn .icon {
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+/* 🌞 visible by default (light mode) */
+.theme-toggle-btn .sun {
+    opacity: 1;
+}
+
+/* 🌙 hidden by default */
+.theme-toggle-btn .moon {
+    opacity: 0;
+}
+
+/* When dark mode is active — reverse visibility */
+#theme-toggle:checked ~ .wrapper .theme-toggle-btn .sun {
+    opacity: 0;
+}
+
+#theme-toggle:checked ~ .wrapper .theme-toggle-btn .moon {
+    opacity: 1;
 }
