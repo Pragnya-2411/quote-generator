@@ -64,9 +64,8 @@ body {
     background-color: #e94e3c;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
-        /* background: linear-gradient(135deg, #2c3e50, #4b79a1); */
         background: linear-gradient(135deg, #f99225, #c20745);
         color: #f0f0f0;
         font-family: "WindSong", cursive;
@@ -125,7 +124,7 @@ body {
     .button:hover {
             background-color: #e85a50;
     }
-}
+} */
 
 /* Toggle icon */
 .theme-toggle-btn {
