@@ -136,6 +136,7 @@ body {
     font-size: 1.8rem;
     z-index: 1000;
     user-select: none;
+    perspective: 500px;
 }
 
 /* Dark theme background and content */
@@ -160,24 +161,29 @@ body {
 /* Both icons stacked in same spot */
 .theme-toggle-btn .icon {
     position: absolute;
-    transition: opacity 0.3s ease;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+    backface-visibility: hidden; /* Needed for 3D flip */
 }
 
-/* 🌞 visible by default (light mode) */
+/* 🌞 icon visible in light mode */
 .theme-toggle-btn .sun {
     opacity: 1;
+    transform: rotateY(0deg);
 }
 
-/* 🌙 hidden by default */
+/* 🌙 icon hidden and flipped */
 .theme-toggle-btn .moon {
     opacity: 0;
+    transform: rotateY(180deg);
 }
 
-/* When dark mode is active — reverse visibility */
+/* On toggle (dark mode) – reverse the flip */
 #theme-toggle:checked ~ .wrapper .theme-toggle-btn .sun {
     opacity: 0;
+    transform: rotateY(180deg);
 }
 
 #theme-toggle:checked ~ .wrapper .theme-toggle-btn .moon {
     opacity: 1;
+    transform: rotateY(0deg);
 }
